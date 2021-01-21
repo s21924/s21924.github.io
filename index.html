@@ -1,1 +1,281 @@
-"hello  world" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://kit.fontawesome.com/fabcc0a4aa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<div class="wrapper active">
+
+
+    <div class="navbar" onclick="toggleMenuIcon(this)">
+        <div class="burger">
+<!--            <i class="fas fa-bars show active" id="burger"></i>-->
+        </div>
+        <div class="closeBurger">
+<!--            <i class="fas fa-times active"></i>-->
+        </div>
+        <div class="burgerTransform"></div>
+    </div>
+    <aside class="active">
+<!--        <nav>-->
+            <a href="#" class="active">Home</a>
+            <a href="#reservation">Dokonaj rezerwacji</a>
+            <a href="#gallery">Galeria</a>
+            <a href="#amenities">Udogodnienia</a>
+            <a href="#form">Formularz rezerwacji</a>
+            <a href="#contact">Kontakt i lokalizacja</a>
+<!--        </nav>-->
+    </aside>
+
+    <div class="header">
+        <div class="background">
+            <img src="img/alpine-village-4676673_1280.jpg" alt="alpine village" class="image_background">
+        </div>
+        <div class="description">
+            <!--            <div class="box">-->
+            <p>HOTEL LOREM IPSUM</p>
+            <h1>Hotel</h1>
+            <h2>Lorem ipsum</h2>
+            <button class="button"onclick="window.location.href='#reservation';"> Zarezerwuj pokój</button>
+            <!--            </div>-->
+        </div>
+    </div>
+
+    <h1 class="interText" id="reservation">Dokonaj rezerwacji</h1>
+
+    <div class="row">
+
+        <div class="column fb">
+            <button class="button reservation FB" onclick="window.location.href='https://www.facebook.com/Marriott/';">
+                <i class="fab fa-facebook"></i><br> Rezerwacja przez FB
+            </button>
+        </div>
+        <div class="column telephone">
+            <a href="tel:+15555551212">
+                <button class="button reservation phone">
+                    <i class="fas fa-phone-square-alt"></i>
+                    <br>Zadzwoń
+                </button>
+            </a>
+        </div>
+        <div class="column form">
+            <button class="button reservation byform" onclick="window.location.href='#form';"><i class="fas fa-keyboard"></i> <br> Rezerwacja przez formularz
+            </button>
+        </div>
+
+        <!--        przycisk do nieistniejącego systemu rezerwacji online -->
+        <div class="column online">
+            <button class="button reservation online"><i class="fas fa-desktop"></i><br> Rezerwacja online</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h1 class="interText" id="gallery">Zapraszamy do obejrzenia naszych zdjęć w pięknej galerii lightbox</h1>
+        <!-- Images used to open the lightbox -->
+        <div class="lightbox_row">
+            <div class="lightbox_column">
+                <img src="img/istockphoto-512882668-1024x1024.jpg" onclick="openModal();currentSlide(1)"
+                     class="hover-shadow">
+            </div>
+            <div class="lightbox_column">
+                <img src="img/istockphoto-585064444-1024x1024.jpg" onclick="openModal();currentSlide(2)"
+                     class="hover-shadow">
+            </div>
+            <div class="lightbox_column">
+                <img src="img/istockphoto-1226610053-1024x1024.jpg" onclick="openModal();currentSlide(3)"
+                     class="hover-shadow">
+            </div>
+            <div class="lightbox_column">
+                <img src="img/istockphoto-1224155565-1024x1024.jpg" onclick="openModal();currentSlide(4)"
+                     class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/istockphoto-512882668-1024x1024.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/istockphoto-585064444-1024x1024.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/istockphoto-1226610053-1024x1024.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/istockphoto-1224155565-1024x1024.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="lightbox_column">
+                    <img class="demo" src="img/istockphoto-512882668-1024x1024.jpg" onclick="currentSlide(1)"
+                         alt="Nature">
+                </div>
+
+                <div class="lightbox_column">
+                    <img class="demo" src="img/istockphoto-585064444-1024x1024.jpg" onclick="currentSlide(2)"
+                         alt="Snow">
+                </div>
+
+                <div class="lightbox_column">
+                    <img class="demo" src="img/istockphoto-1226610053-1024x1024.jpg" onclick="currentSlide(3)"
+                         alt="Mountains">
+                </div>
+
+                <div class="lightbox_column">
+                    <img class="demo" src="img/istockphoto-1224155565-1024x1024.jpg" onclick="currentSlide(4)"
+                         alt="Lights">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="interText" id="amenities">Udogodnienia</h1>
+
+    <div class="row">
+
+        <div class="column amenity">
+            <button class="popup" onclick="myFunction1()">
+                <i class="fas fa-wifi"></i>
+            <span class="popuptext" id="myPopupFirst">W naszym hotelu mamy bardzo dużo internetu</span>
+            </button>
+        </div>
+
+        <div class="column amenity">
+            <button class="popup" onclick="myFunction2()">
+                <i class="fas fa-swimming-pool"></i>
+                <span class="popuptext" id="myPopupSecond">Można sobie popływać</span>
+            </button>
+        </div>
+
+        <div class="column amenity">
+            <button class="popup" onclick="myFunction3()">
+                <i class="fas fa-utensils"></i>
+                <span class="popuptext" id="myPopupThird">Mamy pyszne jedzonko</span>
+            </button>
+        </div>
+
+        <div class="column amenity">
+            <button class="popup" onclick="myFunction4()">
+                <i class="fas fa-tv "></i>
+            <span class="popuptext" id="myPopupFourth">Duuuuużo telewizorów</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <h1 class="interText" id="form">Formularz rezerwacji</h1>
+        <form id="myForm">
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="fname">Imię</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Twoje imię...">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="lname">Nazwisko</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko..">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="e-mail">E-mail:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="e-mail" name="e-mail" placeholder="Twój e-mail..">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="date">Data początku pobytu</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="beginningDate" name="beginningDate">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="date">Data końca pobytu</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" id="endingDate" name="endingDate">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="col-25">
+                    <label for="uwagi">Uwagi</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Dodatkowe uwagi..."
+                              style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="form_row">
+                <input class="submitForm" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div class="contact">
+        <h1 class="interText" id="contact">Kontakt i lokalizacja</h1>
+
+        <div class="contact_data">
+            <div class="col_contact_25">
+                <h1>FAJNY HOTEL</h1>
+                <h2>ul. Jakaś tam</h2>
+                <h2>Miasto</h2>
+                <h2><a href="mailto: abc@example.com">email@email.pl</a></h2>
+                <h2><a href="tel:5554280940">5554280940</a></h2>
+            </div>
+            <div class="col_contact_75">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.079078835054!2d20.991905615778066!3d52.22378107975915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc96ae8df4f5%3A0xfd5f36ad75e9e7f5!2sPolish-Japanese%20Academy%20of%20Information%20Technology!5e0!3m2!1sen!2spl!4v1611238012170!5m2!1sen!2spl"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"></iframe>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
