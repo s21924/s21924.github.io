@@ -18,7 +18,7 @@ body, html {
 }
 
 .wrapper {
-    /*margin: 0px 0px;*/
+    margin: 0px 0px;
     position: relative;
     transition: .3s linear;
 
@@ -38,6 +38,7 @@ body, html {
     display: inline-block;
     cursor: pointer;
 }
+
 .burger, .closeBurger, .burgerTransform {
     width: 35px;
     height: 5px;
@@ -51,7 +52,9 @@ body, html {
     transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.change .closeBurger {opacity: 0;}
+.change .closeBurger {
+    opacity: 0;
+}
 
 .change .burgerTransform {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
@@ -84,12 +87,11 @@ body, html {
 }
 
 
-
 aside {
     position: fixed;
-    top:0;
+    top: 0;
     bottom: 0;
-    left:-300px;
+    left: -300px;
     width: 300px;
     background-color: darkcyan;
     transition: .3s linear;
@@ -117,8 +119,9 @@ aside a:hover {
     /*overflow: hidden;*/
     position: relative;
 }
+
 img.image_background {
-    position:center;
+    position: center;
     bottom: 0;
     right: 0;
     width: 100%;
@@ -126,6 +129,7 @@ img.image_background {
     alignment: center;
     animation: color 4s linear infinite;
 }
+
 .description {
 
     background: rgba(174, 76, 76, 0.5);
@@ -143,14 +147,13 @@ img.image_background {
 }
 
 
-
 .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     /*-ms-flex: 70%; !* IE10 *!*/
-    /*flex: 70%;*/
+    /*flex: 50%;*/
     background-color: white;
     padding: 20px;
     width: 100%;
@@ -171,11 +174,13 @@ img.image_background {
     float: left;
     width: 25%;
 }
+
 .reservation:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .button, .popup {
 
     background-color: white;
@@ -192,6 +197,7 @@ img.image_background {
     cursor: pointer;
     transition-duration: 0.4s;
 }
+
 .button:hover {
     background-color: darkcyan;
     color: white;
@@ -204,7 +210,6 @@ img.image_background {
 }
 
 
-
 .lightbox_row:after {
 
     content: "";
@@ -212,13 +217,12 @@ img.image_background {
     clear: both;
 }
 
-/* Create four equal columns that floats next to eachother */
+
 .lightbox_column {
     float: left;
     width: 25%;
 }
 
-/* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
@@ -232,7 +236,7 @@ img.image_background {
     background-color: black;
 }
 
-/* Modal Content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -242,7 +246,7 @@ img.image_background {
     max-width: 1200px;
 }
 
-/* The Close Button */
+
 .close {
     color: white;
     position: absolute;
@@ -259,12 +263,11 @@ img.image_background {
     cursor: pointer;
 }
 
-/* Hide the slides by default */
 .mySlides {
     display: none;
 }
 
-/* Next & previous buttons */
+
 .prev,
 .next {
     cursor: pointer;
@@ -282,19 +285,18 @@ img.image_background {
     -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
+
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -303,7 +305,7 @@ img.image_background {
     top: 0;
 }
 
-/* Caption text */
+
 .caption-container {
     text-align: center;
     background-color: black;
@@ -329,24 +331,26 @@ img.hover-shadow {
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.fas  {
-    font-size: 75px;
-}
-.fab  {
+
+.fas {
     font-size: 75px;
 }
 
-/* Popup container */.popup {
-                         position: relative;
-                         display: inline-block;
-                         cursor: pointer;
-                         -webkit-user-select: none;
-                         -moz-user-select: none;
-                         -ms-user-select: none;
-                         user-select: none;
-                     }
+.fab {
+    font-size: 75px;
+}
 
-/* The actual popup */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 .popup .popuptext {
     visibility: hidden;
     width: 160px;
@@ -362,7 +366,7 @@ img.hover-shadow {
     margin-left: -80px;
 }
 
-/* Popup arrow */
+
 .popup .popuptext::after {
     content: "";
     position: absolute;
@@ -374,22 +378,30 @@ img.hover-shadow {
     border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class - hide and show the popup */
+
 .popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
+
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 input[type=text], select, textarea, datetime-local {
@@ -397,7 +409,7 @@ input[type=text], select, textarea, datetime-local {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    /*resize: vertical;*/
+
 
 }
 
@@ -442,36 +454,42 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
-/* Clear floats after the columns */
+
 .form_row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .contact_data {
     text-align: center;
     align-content: center;
 }
- Footer
+
+Footer
 .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 700px) {
     .row {
         align-content: center;
         flex-direction: column;
+        margin: 0;
     }
+
     .button {
         width: 200px;
     }
+
     img.demo {
         opacity: 0.6;
         height: 50px;
     }
+
     .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
@@ -480,26 +498,25 @@ input[type=submit]:hover {
 
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
     .navbar a {
         float: none;
         width: 100%;
     }
+
     img.demo {
         opacity: 0.6;
         height: 50px;
     }
 
 
-
 }
+
 @media (orientation: landscape) {
     .description img.color {
         right: 3%;
         height: 56%;
     }
-
 
 
     .header .member {
